@@ -1,0 +1,10 @@
+name: pipeline-experimental
+on: 
+  push: 
+    branches: [main, develops]
+jobs:
+  ci-continous-integration:
+    name: teste de integração
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Olá, FATEC!"
