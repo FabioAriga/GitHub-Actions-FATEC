@@ -1,7 +1,7 @@
 name: pipeline-experimental
 on: 
   push: 
-    branches: [main, develops]
+    branches: [main, develop]
 jobs:
   ci-continous-integration:
     name: teste de integração
