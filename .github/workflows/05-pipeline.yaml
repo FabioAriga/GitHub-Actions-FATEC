@@ -1,0 +1,19 @@
+name: pipeline-experimental
+on: 
+  push: 
+    branches: [main, develop]
+jobs:
+  build:
+    name: job 1 build
+    runs-on: ubuntu-latest
+    steps:
+      - name: passo 1 checkout
+        uses: actions/checkout@v5
+      - name: passo 2 setup node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: passo 3 install dependences
+        run: echo "npm install"
+      - name: passo 4 run test
+        run: echo "npm run test"
