@@ -1,0 +1,15 @@
+# 1. gatilho (trigger)
+name: pipeline-experimental
+on: push
+# 2. definição dos jobs
+jobs:
+  ci-continious-intagracion:
+    name: teste de ci
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Olá, FATEC!"
+        name: mansagem especial
+      - uses: actions/checkout@v5
+        name: fazendo clone e checkout no meu repositorio nesta maquina virtual
+      - name: zipar os arquivos do meu repositorio
+        run: ls -la
