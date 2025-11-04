@@ -10,10 +10,10 @@ jobs:
       - name: passo 1 checkout
         uses: actions/checkout@v5
       - name: passo 2 setup node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '22'
       - name: passo 3 install dependences
-        run: echo "npm install"
+        run: npm ci
       - name: passo 4 run test
-        run: echo "npm run test"
+        run: npm run test
