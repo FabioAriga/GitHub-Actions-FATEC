@@ -3,8 +3,8 @@ on:
   push: 
     branches: [main, develop]
 jobs:
-  build:
-    name: job 1 build
+  testes:
+    name: job 1 Testes
     runs-on: ubuntu-latest
     steps:
       - name: passo 1 checkout
@@ -17,5 +17,13 @@ jobs:
         run: npm ci
       - name: passo 4 run test
         run: npm run test
+  build:
+    name: job 2 Build
+    runs-on: ubuntu-latest
+    steps:
       - run: npm run build
+  deploy:
+    name: job 3 Deploy
+    runs-on: ubuntu-latest
+    steps:
       - run: npm run deploy
