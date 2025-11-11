@@ -6,8 +6,8 @@ on:
 #  schedule:
 #    - cron: '0 2 * * *'
   workflow_dispatch:
-    input:
-      rodar_teste:
+    inputs:
+      rodar_testes:
         description: 'Rodar testes antes do deploy?'
         required: true
         default: 'sim'
