@@ -30,7 +30,25 @@ jobs:
       - name: Executar build
         run: npm run build
       - name: Rodar testes
-        if: ${{ github.event.inputs.rodar_testes == 'sim' }}
+        if: ${{github.event.inputs.rodar_testes == 'sim'}}
         run: |
           npm test
           echo "testes executados"
+      - name: Upload artefato para tarefa de implantação
+        uses: actions/upload-artifact@v4
+        with:
+          name: node-app
+          path: .
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artefato do job build
+        uses: actions/download-artifact@v4
+        with:
+          name: node-app
+      - name: Login no Azure
+        run: echo LOGADO
+      - name: Deploy no Azure Web app
+        id: deploy-to-webapp
+        run: echo EM PRODUÇÃO
