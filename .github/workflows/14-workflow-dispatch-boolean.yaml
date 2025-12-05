@@ -3,7 +3,7 @@ run-name: Running - ${{ github.event_name }}
 on:
   workflow_dispatch:
     inputs:
-      resposta: Matéria
+      resposta:
         description: Essa foi a melhor matéria que você teve?
         type: boolean
 
