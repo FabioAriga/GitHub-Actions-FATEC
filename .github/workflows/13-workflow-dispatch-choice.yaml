@@ -1,7 +1,7 @@
 name: Github Actions - Workflow Dispatch choice Templates
 run-name: Running - ${{ github.event_name }}
 on:
-  Workflow_dispatch:
+  workflow_dispatch:
     inputs:
       tags:
         description: Selecione a tag
@@ -10,7 +10,7 @@ on:
           - tag1
           - tag2
           - tag3
-        defaut: tag1
+        default: tag1
         required: true
 
 jobs:
