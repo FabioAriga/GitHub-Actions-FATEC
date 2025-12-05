@@ -5,11 +5,12 @@ on:
     types:
       - opened
       - reopened
+      - synchronize
       - closed
     branches:
       - main
     paths:
-      - '**.md'
+      - '*.md'
 
 jobs:
   on-push:
