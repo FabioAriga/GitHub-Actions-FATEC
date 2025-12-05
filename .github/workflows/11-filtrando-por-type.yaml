@@ -17,5 +17,5 @@ jobs:
     steps:
       - name: Comentário
         run: |
-          echo: "Comentário PULL-REQUEST WORKFLOW - Type"
-          echo: "Executado!"
+          echo "Comentário PULL-REQUEST WORKFLOW - Type"
+          echo "Executado!"
