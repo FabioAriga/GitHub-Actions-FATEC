@@ -9,7 +9,7 @@ on:
     branches:
       - main
     paths:
-      - '**.md'
+      - '*.md'
 
 jobs:
   on-push:
