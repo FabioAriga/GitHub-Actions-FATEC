@@ -5,18 +5,17 @@ on:
     types:
       - opened
       - reopened
-      - synchronize
       - closed
     branches:
       - main
     paths:
-      - '*.md'
+      - '**.md'
 
 jobs:
   on-push:
-    runs-on: ubuntu_latest
+    runs-on: ubuntulatest
     steps:
       - name: Comentário
         run: |
-          echo: "Comentário PULL-REQUEST WORKFLOW - Type"
-          echo: "Executado!"
+          echo "Comentário PULL-REQUEST WORKFLOW - Type"
+          echo "Executado!"
