@@ -1,0 +1,20 @@
+name: Github Actions - Push - Types Tempalte
+run-name: Running - ${{ github.event_name }}
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+    branches:
+      - main
+
+jobs:
+  on-push:
+    runs-on: ubuntu_latest
+    steps:
+      - name: Comentário
+        run: |
+          echo: "Comentário PULL-REQUEST WORKFLOW - Type"
+          echo: "Executado!"
